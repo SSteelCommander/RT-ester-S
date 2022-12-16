@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>profile generator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+  <script src="./script.js" ></script>
+  <div class="card">
+    <h2>Enter a Gender</h2>
+    <form>
+      <ul>
+        <li>
+          <label for="gender">Select gender</label>
+          <select id="profile-gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </li>
+    <h2>choose an age</h2>
+        <li>
+            <label for="age">select age</label>
+            <input type="text" name="passkey"
+                   id="num" 
+                   oninput="return onlynum()"
+                   minlength="2">
+        <ul>
+        <form>
+  <p>
+      <button id="btn">generate profile</button>
+  </p>
+
+</html>
 
