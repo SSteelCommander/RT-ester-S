@@ -1,1 +1,35 @@
+html {
+    display: block;
+}
 
+body {
+    font-family: sans-serif;
+}
+
+.card {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.enteragender {
+    font-size: 60px;
+font-style: oblique;
+font-weight: bold;
+color: #000;
+position: fixed;
+top: 30px;
+width: 100%;
+min-height: 30px;
+display: inline-block;
+text-align: center;
+margin: 0 auto;
+}
+
+.profilegenerator {
+    font-size: 80px;
+}
+
+#image {
+    height:30%;
+    width: 30%;
+}
