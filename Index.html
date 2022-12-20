@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>profile generator</title>
+  <title>Profile Generator</title>
   <link rel="stylesheet" href="./style.css">
 </head>
-      <body>
-  
+
+<body>
 
 
-    <div id="userProf" class="card">
-        <h1 id="profileName"></h1>
-        <img id="image" src="" />
-        <p>
-            <button id="" onclick="screenShare()">New profile</button>
-        </p>
-    </div>
 
+  <div id="userProf" class="card">
+    <h1 id="profileName">Name</h1>
+    <img id="image" src="testphoto.jpeg" />
+    <p>
+      <button id="" onclick="screenShare()">New Profile</button>
+    </p>
+  </div>
 
   <div id="userSub" class="card">
-    <h2>Enter a Gender</h2>
-    <form>
-      <ul>
-        <li>
-          <label for="gender">Select gender</label>
-          <select id="profile-gender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </li>
-    <h2>choose an age</h2>
-        <li>
-            <label for="age">select age</label>
-            <input type="text" name="passkey"
-                   id="num" 
-                   oninput="return onlynum()"
-                   minlength="2">
-    </ul>
-    </form>
-        <p>
-            <button id="btn" onclick="screenShare()">generate profile</button>
-        </p>
+    <p class="profilegenerator">Profile Generator</p>
+    <div class="words">
+      <form>
+        <ul>
+          <li>
+            <label for="gender">Select Gender</label>
+            <select id="profile-gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </li>
+          <p></p>
+          <li>
+            <label for="age">Select Age</label>
+            <input type="text" name="passkey" id="num" oninput="return onlynum()" minlength="2">
+        </ul>
+      </form>
     </div>
-  <script src="./script.js" ></script>
+    <p>
+      <button id="btn" onclick="screenShare(), getImg()">Generate Profile</button>
+    </p>
+  </div>
+  <script src="./script.js"></script>
 </body>
-</html>
 
+</html>

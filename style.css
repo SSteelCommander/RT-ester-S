@@ -1,1 +1,64 @@
+html {
+    display: block;
+    background-color: rgba(0, 196, 179, 0.747);
+    color: rgb(0, 73, 73)
+}
 
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.card {
+    list-style-position: inside;
+}
+
+.enteragender {
+    font-size: 60px;
+    font-style: oblique;
+    font-weight: bold;
+    color: #000;
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    min-height: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.profilegenerator {
+
+    font-size: 80px;
+    margin: 20px;
+    text-align: center;
+}
+
+#image {
+    height: 30%;
+    width: 30%;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 51, 80);
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(0, 89, 95);
+}
+
+button:hover {
+    background-color: #3e8e41
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
