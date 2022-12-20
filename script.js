@@ -1,11 +1,14 @@
 var x = document.getElementById("userSub");
 var y = document.getElementById("userProf");
 y.style.display = "none";
+//var age = document.getElementById("passkey").name;
+//var gender = document.getElementById("profileGender");
+//console.log(age);
+//console.log(gender);
 
 function show() {
  
-    /* Get image and change value
-    of src attribute */
+    
     let image = document.getElementById("image");
 
     image.src = "change this to the image API"
