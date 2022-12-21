@@ -1,6 +1,30 @@
-var x = document.getElementById("userSub");
-var y = document.getElementById("userProf");
-y.style.display = "none";
+var subVis = document.getElementById("userSub");
+var Profvis = document.getElementById("userProf");
+Profvis.style.display = "none";
+var ageGroup;
+var usergender;
+
+function subInput () {
+var userAge = document.getElementById("num").value;
+userGender = document.getElementById("profile-gender").value;
+if (userAge < 3) {
+    ageGroup = "infant"
+} else if (userAge < 13){
+    ageGroup = "child"
+} else if (userAge < 20){
+    ageGroup = "teenager"
+} else if (userAge < 60){
+    ageGroup = "adult"
+}  else{
+    ageGroup = "old"
+}
+
+console.log(userAge);
+console.log(userGender);
+console.log(ageGroup);
+}
+
+
 
 let image = document.getElementById("image");
 const api_url = 'https://api.unsplash.com/photos/random?query=portrait&client_id=DSpfugB7jcZWFimvHwybAWNR4XWCkIlZeR8PXrx6u2c'
@@ -34,17 +58,17 @@ function show() {
     document.getElementById("profileName").innerHTML = "change this to the name API";
 }
 
-function screenShare() {
-    if (x.style.display === "none") {
-        x.style.display = "block";
+function switchScreen() {
+    if (subVis.style.display === "none") {
+        subVis.style.display = "block";
     } else {
-        x.style.display = "none";
+        subVis.style.display = "none";
     }
 
-    if (y.style.display === "none") {
-        y.style.display = "block";
+    if (Profvis.style.display === "none") {
+        Profvis.style.display = "block";
     } else {
-        y.style.display = "none";
+        Profvis.style.display = "none";
     }
 }
 
