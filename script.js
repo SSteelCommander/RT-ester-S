@@ -49,27 +49,6 @@ function screenShare() {
     }
 }
 
-function searchUnsplash(query) {
-
-    const unsplashAPIKey = "DSpfugB7jcZWFimvHwybAWNR4XWCkIlZeR8PXrx6u2c"
-
-
-
-
-    const RequestURL = `https://api.unsplash.com/photos/random?key=${DSpfugB7jcZWFimvHwybAWNR4XWCkIlZeR8PXrx6u2c}`
-
-
-    const ResultList = $("#result-list");
-    ResultList.empty();
-    // Make a request for a user with a given Query
-    axios.get(`${RequestURL}&q=${query}`)
-        .then(({ data = {} }) => {
-            if (data.items) {
-                data.items.map(({ title }) => ResultList.append(`<li>${title}</li>`))
-            }
-        })
-}
-
 
 // var requestUrl = 'https://api.github.com/orgs/nodejs/repos?per_page=5';
 
