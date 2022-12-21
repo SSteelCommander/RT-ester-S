@@ -13,9 +13,9 @@
 
   <div id="userProf" class="card">
     <h1 id="profileName">Name</h1>
-    <img id="image" src="testphoto.jpeg" />
+    <img id="image" src="" />
     <p>
-      <button id="" onclick="screenShare()">New Profile</button>
+      <button id="" onclick="switchScreen()">New Profile</button>
     </p>
   </div>
 
@@ -26,7 +26,7 @@
         <ul>
           <li>
             <label for="gender">Select Gender</label>
-            <select id="profile-gender">
+            <select id="profile-gender" name="gender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
@@ -34,12 +34,12 @@
           <p></p>
           <li>
             <label for="age">Select Age</label>
-            <input type="text" name="passkey" id="num" oninput="return onlynum()" minlength="2">
+            <input type="number" name="age" id="num">
         </ul>
       </form>
     </div>
     <p>
-      <button id="btn" onclick="screenShare(), getImg()">Generate Profile</button>
+      <button id="btn" onclick="switchScreen(),subInput(),getImg()">Generate Profile</button>
     </p>
   </div>
   <script src="./script.js"></script>
