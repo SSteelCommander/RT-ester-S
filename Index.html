@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Profile Generator</title>
-  <link rel="stylesheet" href="./style.css">
+  <link href="/dist/output.css" rel="stylesheet">
 </head>
-      <body>
-  
 
-        
-    <div id="userProf" class="card">
-        <h1 id="profileName">Name</h1>
-        <img id="image" src="testphoto.jpeg" />
-        <p>
-            <button id="" onclick="screenShare()">New Profile</button>
-        </p>
-    </div>
+<body>
+
+
+
+  <div id="userProf" class="card">
+    <h1 id="profileName">Name</h1>
+    <img id="image" src="testphoto.jpeg" />
+    <p>
+      <button id="" onclick="screenShare()">New Profile</button>
+    </p>
+  </div>
 
   <div id="userSub" class="card">
-    <p class="profilegenerator">Profile Generator</p>
+    <p class="profilegenerator text-white">Profile Generator</p>
     <div class="words">
-    <form>
-      <ul>
-        <li>
-          <label for="gender">Select Gender</label>
-          <select id="profile-gender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-        </li>
-    <p></p>
-        <li>
+      <form>
+        <ul>
+          <li>
+            <label for="gender" >Select Gender</label>
+            <select id="profile-gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </li>
+          <p></p>
+          <li>
             <label for="age">Select Age</label>
-            <input type="text" name="passkey"
-                   id="num" 
-                   oninput="return onlynum()"
-                   minlength="2">
-    </ul>
-    </form>
+            <input type="text" name="passkey" id="num" oninput="return onlynum()" minlength="2">
+        </ul>
+      </form>
     </div>
-        <p>
-            <button id="btn" onclick="screenShare()">Generate Profile</button>
-        </p>
-    </div>
-  <script src="./script.js" ></script>
+    <p>
+      <button id="btn" onclick="screenShare(), getImg()">Generate Profile</button>
+    </p>
+  </div>
+  <script src="./script.js"></script>
 </body>
-</html>
 
+</html>
