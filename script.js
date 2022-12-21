@@ -2,7 +2,7 @@ var subVis = document.getElementById("userSub");
 var Profvis = document.getElementById("userProf");
 Profvis.style.display = "none";
 var ageGroup;
-var usergender;
+var userGender;
 
 function subInput () {
 var userAge = document.getElementById("num").value;
