@@ -56,7 +56,7 @@ function saveInput () {
 }
 
 function storageOutput(){
-    ageGroup = localStorage.getItem("saveAge");
+    userAge = localStorage.getItem("saveAge");
     ageGroup = localStorage.getItem("saveAgeGroup");
     userGender = localStorage.getItem("saveGender");
     document.getElementById("profileAge").innerHTML= userAge;
