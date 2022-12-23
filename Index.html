@@ -14,8 +14,11 @@
   <div id="userProf" class="card">
     <h1 id="profileName">Name</h1>
     <img id="image" src="" />
+    <p id="profileAge"> </p>
     <p>
       <button id="" onclick="switchScreen()">New Profile</button>
+      <button id="" onclick="getImg(),getName()">Generate</button>
+      <button id="" onclick="storageOutput(),getImg(),getName()">Generate saved</button>
     </p>
   </div>
 
@@ -39,7 +42,9 @@
       </form>
     </div>
     <p>
-      <button id="btn" onclick="switchScreen(),subInput(),getImg()">Generate Profile</button>
+      <button id="btn" onclick="switchScreen(),subInput(),getImg(),getName()">Generate Profile</button>
+      <button id="btn" onclick="saveInput()">Save Input</button>
+      <button id="btn" onclick="switchScreen(),storageOutput(),getImg(),getName()">Generate Saved Input</button>
     </p>
   </div>
   <script src="./script.js"></script>

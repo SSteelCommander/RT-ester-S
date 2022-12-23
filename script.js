@@ -1,28 +1,71 @@
 var subVis = document.getElementById("userSub");
 var Profvis = document.getElementById("userProf");
 Profvis.style.display = "none";
+var userAge;
 var ageGroup;
 var userGender;
+var saveAge;
+var saveGeneder;
+
 
 function subInput () {
-var userAge = document.getElementById("num").value;
+userAge = document.getElementById("num").value;
 userGender = document.getElementById("profile-gender").value;
 if (userAge < 3) {
     ageGroup = "infant"
 } else if (userAge < 13){
     ageGroup = "child"
 } else if (userAge < 20){
-    ageGroup = "teenager"
+    ageGroup = "teenager"   
 } else if (userAge < 60){
     ageGroup = "adult"
 }  else{
     ageGroup = "old"
 }
 
+document.getElementById("profileAge").innerHTML= userAge;
+
 console.log(userAge);
 console.log(userGender);
 console.log(ageGroup);
 }
+
+
+function saveInput () {
+    userAge = document.getElementById("num").value;
+    userGender = document.getElementById("profile-gender").value;
+    document.getElementById("profileAge").innerHTML= userAge;
+    if (userAge < 3) {
+        ageGroup = "infant"
+    } else if (userAge < 13){
+        ageGroup = "child"
+    } else if (userAge < 20){
+        ageGroup = "teenager"   
+    } else if (userAge < 60){
+        ageGroup = "adult"
+    }  else{
+        ageGroup = "old"
+    }
+    
+    console.log(userAge);
+    console.log(userGender);
+    console.log(ageGroup);
+    localStorage.setItem("saveAge",userAge);
+    localStorage.setItem("saveAgeGroup",ageGroup);
+    localStorage.setItem("saveGender",userGender);
+}
+
+function storageOutput(){
+    ageGroup = localStorage.getItem("saveAge");
+    ageGroup = localStorage.getItem("saveAgeGroup");
+    userGender = localStorage.getItem("saveGender");
+    document.getElementById("profileAge").innerHTML= userAge;
+}
+
+
+
+
+
 
 
 
@@ -44,19 +87,6 @@ async function getImg() {
 
 }
 
-function show() {
-
-    /* Get image and change value
-    of src attribute */
-    // let image = document.getElementById("image");
-
-    image.src = "change this to the image API"
-
-
-
-
-    document.getElementById("profileName").innerHTML = "change this to the name API";
-}
 
 function switchScreen() {
     if (subVis.style.display === "none") {
