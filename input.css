@@ -1,10 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
-html {
+/*html {
     display: block;
     background-color: rgba(0, 196, 179, 0.747);
     color: rgb(0, 73, 73)
