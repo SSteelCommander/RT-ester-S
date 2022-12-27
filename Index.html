@@ -4,42 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Profile Generator</title>
-  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-teal-400 font-mono py-12">
 
-
-
-  <div id="userProf" class="card">
-    <h1 id="profileName">Name</h1>
-    <img id="image" src="testphoto.jpeg" />
-    <p>
-      <button id="" onclick="screenShare()">New Profile</button>
+  <div id="userProf" class="card text-center">
+    <h1 id="profileName" class=py-6 text-2xl>Name</h1>
+    <img id="image" src="" class="mx-auto"/>
+    <p id="profileAge"> </p>
+    <p class="py-6">
+      <button class="border border-blue-800 text-blue-800" id="" onclick="switchScreen()">New Profile</button>
+      <button class="border border-blue-800 text-blue-800" id="" onclick="getImg(),getName()">Generate</button>
+      <button class="border border-blue-800 text-blue-800" id="" onclick="storageOutput(),getImg(),getName()">Generate saved</button>
     </p>
   </div>
 
-  <div id="userSub" class="card">
-    <p class="profilegenerator text-sky-400">Profile Generator</p>
-    <div class="words">
+  <div id="userSub" class="card flex flex-col items-center">
+    <p class="profilegenerator text-blue-800 text-5xl text-center">Profile Generator</p>
+    <div class="words text:left">
       <form>
         <ul>
-          <li>
-            <label for="gender" >Select Gender</label>
-            <select id="profile-gender">
+          <li class="py-6">
+            <label for="gender">Select Gender</label>
+            <select id="profile-gender" name="gender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
           </li>
-          <p></p>
           <li>
             <label for="age">Select Age</label>
-            <input type="text" name="passkey" id="num" oninput="return onlynum()" minlength="2">
+            <input type="number" name="age" id="num">
         </ul>
       </form>
     </div>
-    <p>
-      <button id="btn" onclick="screenShare(), getImg()">Generate Profile</button>
+    <p class="py-6">
+      <button id="btn" onclick="switchScreen(),subInput(),getImg(),getName()"><span class="text-teal-400">-</span>Generate Profile<span class="text-teal-400">-</span></button>
+      <button id="btn" onclick="saveInput()">Save Input</button>
+      <button id="btn" onclick="switchScreen(),storageOutput(),getImg(),getName()">Generate Saved Input</button>
     </p>
   </div>
   <script src="./script.js"></script>
