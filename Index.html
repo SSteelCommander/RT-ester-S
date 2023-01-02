@@ -5,42 +5,51 @@
   <meta charset="UTF-8">
   <title>Profile Generator</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-teal-400 font-mono py-12">
 
+  <div id="userProf" class="card text-center">
 
-
-  <div id="userProf" class="card">
-    <h1 id="profileName1">Name</h1>
-    <h1 id="profileName">LastName</h1>
-    <img id="image" src="" />
-    <p>
-      <button id="" onclick="switchScreen()">New Profile</button>
+    <h1 id="profileName1" class=py-6 text-2xl>Name</h1>
+    <h1 id="profileName" class=py-6 text-2xl>lastName</h1>
+    <img id="image" src="" class="mx-auto" />
+    <p id="profileAge"> </p>
+    <p class="py-6">
+      <button class="border border-blue-800 text-blue-800" id="" onclick="switchScreen()">New Profile</button>
+      <button class="border border-blue-800 text-blue-800" id=""
+        onclick="getImg(),getName1(),getName(), saveInput()">Generate</button>
+      <button class="border border-blue-800 text-blue-800" id="" onclick="storageOutput()">Generate saved</button>
     </p>
   </div>
+  <!-- ,getImg(),getName1(),getName() -->
 
-  <div id="userSub" class="card">
-    <p class="profilegenerator">Profile Generator</p>
-    <div class="words">
+  <div id="userSub" class="card flex flex-col items-center">
+    <p class="profilegenerator text-blue-800 text-5xl text-center">Profile Generator</p>
+    <div class="words text:left">
       <form>
         <ul>
-          <li>
+          <li class="py-6">
             <label for="gender">Select Gender</label>
             <select id="profile-gender" name="gender">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
           </li>
-          <p></p>
           <li>
             <label for="age">Select Age</label>
             <input type="number" name="age" id="num">
         </ul>
       </form>
     </div>
-    <p>
-      <button id="btn" onclick="switchScreen(),subInput(),getImg(),getName1(),getName()">Generate Profile</button>
+    <p class="py-6">
+      <button id="btn" onclick="switchScreen(),subInput(),getImg(),getName1(), getName()"><span
+          class="text-teal-400">-</span>Generate Profile<span class="text-teal-400">-</span></button>
+      <button id="btn" onclick="saveInput()">Save Input</button>
+      <button id="btn" onclick="switchScreen(),storageOutput()">Generate Saved
+        Input</button>
+      <!-- ,getImg(),getName(),getName1() -->
     </p>
   </div>
   <script src="./script.js"></script>
