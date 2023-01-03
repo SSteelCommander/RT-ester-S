@@ -11,7 +11,7 @@ The "Save Input" button utilizes the local storage to save the parameters create
 
 Clicking on the "Generate Saved" button will retrieve the latest generated user profile.
 
-When a new profile is generated the user is provided with the options to created another profile based upon new data by clicking the "New Profile" button, generate another profile name and photo using the current parameters by clicking the "Generate" button, or to retrieve the previously generated profile by clicking on the "Generate Saved" button.
+When a new profile is generated the user is provided with the options to created another profile based upon new data by clicking the "New Profile" button, generate another profile name and photo using the current parameters by clicking the "Generate" button, or to retrieve the previously generated profile by clicking on the "Generate Saved" button .
 
 
 https://github.com/SSteelCommander/RT-ester-S
