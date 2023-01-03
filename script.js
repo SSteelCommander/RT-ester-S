@@ -5,7 +5,7 @@ var userAge;
 var ageGroup;
 var userGender;
 
-
+//gets input from user or age and gender, seperates age into different age groups
 function subInput() {
     userAge = document.getElementById("num").value;
     userGender = document.getElementById("profile-gender").value;
@@ -28,7 +28,7 @@ function subInput() {
     console.log(ageGroup);
 }
 
-
+// gets input, saves the input to local storage, seperates into age groups.
 function saveInput() {
     userAge = document.getElementById("num").value;
     userGender = document.getElementById("profile-gender").value;
@@ -53,6 +53,7 @@ function saveInput() {
     localStorage.setItem("saveGender", userGender);
 }
 
+// gets the saved data from local storage and sets it as the input
 function storageOutput() {
     userAge = localStorage.getItem("saveAge");
     ageGroup = localStorage.getItem("saveAgeGroup");
@@ -67,7 +68,7 @@ function storageOutput() {
 
 
 
-
+//generates the image from api based on agegroup and generder
 let image = document.getElementById("image");
 const api_url = 'https://api.unsplash.com/photos/random?query=portrait&client_id=DSpfugB7jcZWFimvHwybAWNR4XWCkIlZeR8PXrx6u2c'
 
@@ -89,7 +90,7 @@ async function getImg() {
 }
 
 
-
+//generates the last name
 let name = document.getElementById('name');
 const name_api = "https://randommer.io/api/Name?nameType=surname&quantity=1"
 
@@ -116,7 +117,7 @@ async function getName() {
 }
 
 
-
+//generats the first name based on gender
 let name1 = document.getElementById('name1');
 
 async function getName1() {
@@ -160,7 +161,7 @@ async function getName1() {
 
 }
 
-
+//switches from the profile creaton screen to the profile screen and back
 function switchScreen() {
     if (subVis.style.display === "none") {
         subVis.style.display = "block";
